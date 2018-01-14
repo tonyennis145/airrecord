@@ -1,4 +1,4 @@
-class CreateAirtableRecords < ActiveRecord::Migration[5.0]
+class CreateAirtableRecords < ActiveRecord::Migration
   def change
     create_table :airtable_records do |t|
       t.string :identifier
