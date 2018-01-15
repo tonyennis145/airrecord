@@ -207,6 +207,10 @@ module Airrecord
         serializable_fields == other.serializable_fields
     end
 
+    def self.locally_persisted_records
+      AirtableRecord.where("base_key = ?",base_key) 
+    end
+
     protected
 
     def association(key)
