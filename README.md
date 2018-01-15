@@ -1,4 +1,39 @@
-# Airrecord
+# Airrecord+
+
+Adds 2 simple features on top of the excellent airrecord gem. 
+
+- Persists airtable records to a local database.
+- Tracks changes to records using Airtable
+
+## Requirements
+- Postgres with JSONB support (9.4+)
+
+## Setup
+
+```bash
+bundle exec rake airrecord_engine:install:migrations
+bundle exec rails generate paper_trail:install
+bundle exec rake db:migrate
+```
+
+## Use 
+
+Currently the bare bones toolkit consists of:
+
+```
+rake airrecord:persist_all
+```
+
+to pull and persist records (I run this hourly on my server), and
+
+```
+TableFromAirtable.locally_persisted_records
+```
+
+(Where `TableFromAirtable` is an instance of `Airrecord::Table`) to access the records locally.
+
+
+# Original documentation follows
 
 Airrecord is an alternative Airtable Ruby libary to
 [`airtable-ruby`](https://github.com/airtable/airtable-ruby). Airrecord attempts
