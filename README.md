@@ -1,15 +1,15 @@
 # Airrecord+
 
-Adds 2 simple features on top of the excellent (airrecord)[https://github.com/sirupsen/airrecord] gem. 
+Adds 2 simple features on top of the excellent [airrecord](https://github.com/sirupsen/airrecord) gem. 
 
 - Enables persisting airtable records to a local database.
 - If persisted, tracks changes to records using paper trail.
 
 ## Requirements
-
 - Postgres with JSONB support (9.4+)
 
 ## Setup
+
 ```bash
 bundle exec rake airrecord_engine:install:migrations
 bundle exec rails generate paper_trail:install
