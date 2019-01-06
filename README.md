@@ -8,7 +8,7 @@ Adds 2 simple features on top of the excellent [airrecord](https://github.com/si
 ## Requirements
 - Postgres with JSONB support (9.4+)
 
-## Setup
+## Setup
 ```bash
 bundle exec rake airrecord_engine:install:migrations
 bundle exec rails generate paper_trail:install
